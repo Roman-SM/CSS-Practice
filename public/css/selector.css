@@ -1,0 +1,313 @@
+/* Селектор батьківський для всіх тегів */
+:root {
+  background: purple;
+}
+
+/* Селектор для конкретного тегу */
+html {
+  max-width: 720px;
+
+  background: blue;
+}
+
+/* Селектор для конкретного тегу */
+body {
+  background: #fff;
+}
+
+/* Селектор глобальний, для всіх тегів, він є і універсальним тегом */
+* {
+  color: red;
+}
+
+/* Селектор класів в якому є class="box" */
+.box {
+  background: #f1e3e3;
+}
+
+/* Селектор ідентефікатор в якому є id="user" */
+#user {
+  color: blue;
+}
+
+/* Перший button тег для присвоєння, Другий button тег для class="button" */
+button.button {
+  color: rgb(47, 81, 81);
+}
+
+/* Селектор ідентефікатор в якому є class="button" */
+.button {
+  background: silver;
+  color: black;
+}
+
+/* Селектор в якому є кілька визначених тегів яким буде надаватись стиль
+button.button#button це селектор який визначає тег button в якому є class="button" і id="button" */
+h1,
+h2,
+button.button#button {
+  color: green;
+}
+
+/* Cелектор який визначає id="user", class="user" */
+#user,
+.user {
+  color: blanchedalmond;
+}
+
+/* Cелектор який визначає тег <div> в якому є тег <p> */
+div > p {
+  color: rgb(126, 116, 4);
+}
+
+/* Cелектор який визначає тег <footer> в якому є class="user" */
+footer > .user {
+  color: brown;
+}
+
+/* Cелектор який визначає тег <footer> в якому є тег <em> */
+footer em {
+  color: mediumpurple;
+}
+
+/* Cелектор який визначає тег <footer> в якому є тег <em> і в цьому тегу є class="child" */
+footer em.child {
+  color: rgb(217, 255, 0);
+}
+
+/* Селектор сестринського тегу, працює лиш тоді якщо тег <h1> поряд з тегом <p> */
+h1 + p {
+  background: black;
+}
+
+/* Селектор сусідського тегу, працює навіть якщо тег <h1> не поряд з тегом <p> */
+h1 ~ p {
+  color: rgb(207, 183, 183);
+  background: blueviolet;
+}
+
+/* Селектор сусідського тегу, працює коли тег <h1> не поряд з тегом <p> і тег <p> знаходиться в тегу <div> */
+h1 ~ div > p {
+  color: black;
+  background: rgb(173, 203, 143);
+}
+
+/* Селектор сусідського тегу, працює коли тег <h1> не поряд з тегом <p> і тег <p> знаходиться в тегу який нам не відомий */
+h1 ~ * > p {
+  color: mediumseagreen;
+}
+
+/* Селектор ідентефікатора тегу, надає стиль тегу в якому є class="card-dark" */
+.card-dark {
+  background: #f2f2f2;
+}
+
+/* Селектор ідентефікатора тегу, надає стиль тегу в якому є class="item" */
+.item {
+  color: green;
+}
+
+/* Селектор першого тегу, надає стиль першому тегу */
+.item:first-child {
+  color: blue;
+}
+
+/* Селектор останнього тегу, надає стиль останньому тегу */
+.item:last-child {
+  color: blue;
+}
+
+/* Селектор одиничного тегу, працює якщо є тільки один тег в батьківському тегу */
+.item:only-child {
+  color: gold;
+}
+
+/* Селектор першого тегу, це селектор який визначає перший тег серед всіх його типу і надає йому стиль */
+.item:first-of-type {
+  color: gold;
+}
+
+/* Селектор першого тегу, це селектор який визначає останній тег серед всіх його типу і надає йому стиль */
+.item:last-of-type {
+  color: rgb(255, 0, 0);
+}
+
+/* Селектор одиничного тегу, працює якщо є тільки один тег в батьківському тегу */
+.item:only-of-type {
+  color: rgb(97, 102, 61);
+}
+
+/* Селектор який задає колір конкретному тегі за порядковим числом в індексі (дужках) 
+В індекс можна вписати 
+порядковий номер, 
+парні теги - even, 
+не парні теги - odd
+формули 3n + 1 де 3n це кожен третій тег буде мати заданий стиль, 
+а + 1 це число на скільки тегів буде посуното цей стиль в низ 
+а - 1 це число на скільки тегів буде посуното цей стиль в верх*/
+.item:nth-child(3n + 5) {
+  color: #009a9d;
+}
+
+/* те саме що і nth-child але підрахунок тегів починається з кінця */
+.item:nth-last-child(1) {
+  color: #009a9d;
+}
+
+/* те саме що і nth-child але підрахунок іде залежно від класу тега */
+.item:nth-of-type(1) {
+  color: #009a9d;
+}
+
+/* те саме що і nth-of-type але підрахунок іде знизу  */
+.item:nth-last-of-type(1) {
+  color: #009a9d;
+}
+
+/* Селектор який надає стиль тегам окрім заданого в індексі */
+p:not(.item) {
+  color: blueviolet;
+}
+
+/* Те саме, що і p:not() тільки наоборот, вказується індекс тегу який не має мати цей стиль */
+.item:not(p) {
+  color: #009a9d;
+}
+
+/* Селектор який надає стиль пустому тегу */
+p:empty {
+  height: 10px;
+  background: red;
+}
+
+.card-dark {
+  background: rgb(213, 213, 213);
+}
+
+.input-dark {
+  background: rgb(166, 166, 166);
+}
+
+/* Селектор який надає стиль за вказаним атрибутом вписаним в [] */
+.input-dark[required] {
+  background: rgb(94, 94, 94);
+}
+
+/* Селектор який надає стиль за вказаним атрибутом вписаним в [] */
+.input-dark[type='number'] {
+  background: rgb(138, 16, 16);
+}
+.small-img[alt~='small'] {
+  height: 500px;
+}
+a[rel~='external'] {
+  color: green;
+}
+button[class|='btn'] {
+  background: rgb(145, 145, 145);
+}
+a[class^='btn'] {
+  background: rgb(81, 81, 81);
+}
+a[class*='btn'] {
+  background: rgb(81, 81, 81);
+}
+a[class$='big'] {
+  background: rgb(68, 56, 56);
+}
+
+/* Селектор який надає стиль для першої букви атрибута */
+.btn::first-letter {
+  color: brown;
+}
+.big-text::first-line {
+  color: brown;
+}
+
+/* Селектор який надає стиль для placeholder в input */
+.input-dark::placeholder {
+  color: green;
+}
+.big-text::before,
+.big-text::after {
+  content: '$$$';
+  color: green;
+}
+.card-dark {
+  background: rgb(185, 185, 185);
+}
+#test:target {
+  color: red;
+}
+.link:link {
+  color: red;
+}
+.link:hover {
+  color: green;
+}
+.card:hover {
+  background: green;
+}
+.link:active {
+  color: purple;
+}
+.card:active {
+  background: purple;
+}
+input {
+  background-color: gray;
+}
+input:focus {
+  background-color: red;
+}
+.card:focus-within {
+  background: red;
+}
+.card:lang(en) {
+  background: silver;
+}
+.card:lang(en) > span::after {
+  content: ' (en)';
+}
+button {
+  background-color: greenyellow;
+}
+button:enabled {
+  background-color: #16c100;
+}
+button:disabled {
+  background-color: #284324;
+}
+.inp:read-write {
+  background-color: #16c100;
+}
+.inp:read-only {
+  background-color: red;
+}
+input[type='checkbox']:checked ~ span {
+  background-color: red;
+}
+.valid:valid {
+  background: yellow;
+}
+.valid:invalid {
+  background: goldenrod;
+}
+.valid:optional {
+  background: green;
+}
+.number:focus {
+  background: gray;
+}
+.number:out-of-range {
+  background: red;
+}
+.number:in-range {
+  background: blue;
+}
+.number:invalid {
+  background: yellow;
+}
+input:placeholder-shown ~ span {
+  background: pink;
+}

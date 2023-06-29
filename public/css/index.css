@@ -1,7 +1,93 @@
-html {
-  max-width: 720px;
+/* p {
+  background: rgb(114, 141, 224);
 }
 
-body {
-  background: #fff;
+.card > p {
+  color: rgba(47, 255, 0, 0.16);
+} */
+.card > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
+}
+p:focus,
+p:active,
+p:hover {
+  -webkit-text-fill-color: rgb(0, 242, 255);
+  -webkit-text-stroke: 1px rgb(200, 255, 0);
+
+  direction: rtl;
+}
+/* Селектор який надає стиль по замовчуванню */
+/* #test {
+  color: initial;
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke: initial;
+} */
+/* Селектор який надає стиль від батьківського тегу */
+/* #test {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke: inherit;
+} */
+/* Селектор який надає стиль від батьківського тегу, якщо такого немає, стиль буде за замовчуванням  */
+/* #test {
+  color: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: unset;
+} */
+/* Селектор який скасовує всі стилі і властивості, і встановлює все за замовчуванням */
+/* #test {
+  color: none;
+  -webkit-text-fill-color: none;
+  -webkit-text-stroke: none;
+} */
+/* #test {
+  color: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: unset;
+
+  writing-mode: vertical-lr;
+} */
+
+#test {
+  color: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-text-stroke: unset;
+
+  text-align: center;
+  letter-spacing: 10px;
+}
+span {
+  text-decoration: underline dotted red;
+  text-decoration-color: blue;
+}
+pre {
+  tab-size: 1;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  font-display: swap;
+}
+span {
+  font-size: xx-large;
+  font-weight: lighter;
+  font-style: oblique;
+}
+.test1 {
+  display: none;
+}
+.block {
+  display: block;
+  background-color: rgb(226, 226, 226);
+  margin: auto;
+
+  width: 100%;
+
+  padding: 15px;
+
+  box-sizing: content-box;
 }
